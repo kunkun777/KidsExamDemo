@@ -29,16 +29,14 @@ public class UserDaoImpl implements UserDao {
             User users;
             if(rs.next()){
                 users=new User();
-                //从数据库中获取值设置到实体类的setter方法中
                 users.setId(rs.getString("id"));
-                users.setUsername(rs.getString("name"));
+                users.setUsername(rs.getString("username"));
                 users.setPassword(rs.getString("password"));
                 users.setEmail(rs.getString("email"));
-                return user;
+                return users;
             }else{
                 return null;
             }
-
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
@@ -67,7 +65,7 @@ public class UserDaoImpl implements UserDao {
         user.setPassword("111");
         user.setAddress("add");
         user.setEmail("111");
-        s.register(user);
+        System.out.println(s.login(user).toString());
 //        s.login(user);
     }
 }
