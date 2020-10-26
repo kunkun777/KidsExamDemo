@@ -1,16 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 31262
-  Date: 2020/10/26
-  Time: 0:52
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" import="java.util.*" pageEncoding="gb2312"%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <title>error</title>
+    <title>登录出错界面</title>
 </head>
-<body>
-鐧诲綍閬囧埌閿欒,璇锋煡鐪嬬敤鎴峰悕鍜屽瘑鐮佹槸鍚︽纭紒
+
+<body bgcolor="#ddd" style="font-family:Microsoft YaHei">
+<div style="text-align:center;margin-top:130px">
+    <p>输入的用户名不存在或者密码错误</p>
+    <a href="login.jsp">点我返回登陆界面</a>
+</div>
 </body>
 </html>

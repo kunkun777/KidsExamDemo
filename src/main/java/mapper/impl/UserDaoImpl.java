@@ -45,8 +45,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public boolean register(User user) {
-        String sql= "insert into user(id,username,password,address,email) values(?,?,?,?,?) ";
-        List<Object> list= new ArrayList<>();
+        String sql = "insert into user(id,username,password,address,email) values(?,?,?,?,?) ";
+        List<Object> list = new ArrayList<>();
         user.setId(UUID.randomUUID().toString());
         list.add(user.getId());
         list.add(user.getUsername());
@@ -55,17 +55,6 @@ public class UserDaoImpl implements UserDao {
         list.add(user.getEmail());
 //        list.add(user.getSex());
 
-        return MapperUtil.addUpdateDelete(sql,list.toArray());
-    }
-
-    public static void main(String[] args) {
-        UserDaoImpl s=new UserDaoImpl();
-        User user=new User();
-        user.setUsername("jiaxing");
-        user.setPassword("111");
-        user.setAddress("add");
-        user.setEmail("111");
-        System.out.println(s.login(user).toString());
-//        s.login(user);
+        return MapperUtil.addUpdateDelete(sql, list.toArray());
     }
 }

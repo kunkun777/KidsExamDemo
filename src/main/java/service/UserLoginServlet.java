@@ -42,7 +42,7 @@ public class UserLoginServlet extends HttpServlet {
         if (userDao.login(user)!=null) {
             request.getRequestDispatcher("/success.jsp").forward(request, response);
         } else {
-            request.getRequestDispatcher("error.jsp").forward(request, response);
+            request.getRequestDispatcher("/error.jsp").forward(request, response);
         }
     }
 
